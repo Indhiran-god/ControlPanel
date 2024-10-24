@@ -14,6 +14,9 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true  // Allow credentials like cookies
 }));
+
+app.options('*', cors());  // Handle preflight requests
+
 app.use(cookieParser());
 app.use(express.json());
 
@@ -40,4 +43,3 @@ connectDB().then(() => {
 }).catch(err => {
     console.error("Database connection failed:", err.message);
 });
-
