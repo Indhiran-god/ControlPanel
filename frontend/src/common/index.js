@@ -1,4 +1,4 @@
-const backendDomin = "http://localhost:8080"; // Ensure this is consistent
+const backendDomin = process.env.REACT_APP_BACKEND_URL//"http://localhost:8080"; // Ensure this is consistent
 
 const SummaryApi = {
     signUP: {
